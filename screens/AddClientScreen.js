@@ -80,7 +80,7 @@ export default function AddClientScreen(props){
         }
     };
     // access form 
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = useState(false); 
     
     const [genderOpen, setGenderOpen] = useState(false);
     const [genderValue, setGenderValue] = useState(null);
