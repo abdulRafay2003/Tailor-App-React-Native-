@@ -8,7 +8,7 @@ function MaterialStackedLabelTextbox(props) {
       <TextInput
         value={props.value}
         onChangeText={props.onChangeText}
-        placeholder="Input"
+        placeholder={props.placeholder}
         secureTextEntry={props.secureTextEntry}
         style={styles.inputStyle}
       />

@@ -3,15 +3,15 @@ import { StyleSheet, TouchableOpacity, Text } from "react-native";
 
 function MaterialButtonViolet(props) {
   return (
-    <TouchableOpacity style={[styles.container, props.style]}>
-      <Text style={styles.caption}>{props.text}</Text>
+    <TouchableOpacity style={[styles.container, props.style]} onPress={props.onPress}>
+      <Text style={[styles.caption, props.textStyle]}>{props.text}</Text>
     </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#3F51B5",
+    backgroundColor: "#white",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",

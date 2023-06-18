@@ -88,17 +88,29 @@ const OrderScreen = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>Product Type:</Text>
-        <RNPickerSelect
-          style={pickerSelectStyles}
-          onValueChange={(value) => setProductType(value)}
-          items={productTypes}
-          placeholder={{ label: "Select product type", value: null }}
-          value={productType}
-        />
+        <View style={{ width: "50%", paddingHorizontal: 10 }}>
+          <Text style={styles.label}>Product Type:</Text>
+          <RNPickerSelect
+            style={pickerSelectStyles}
+            onValueChange={(value) => setProductType(value)}
+            items={productTypes}
+            placeholder={{ label: "Select product type", value: null }}
+            value={productType}
+          />
+        </View>
+        <View style={{ width: "50%", paddingHorizontal: 10 }}>
+          <Text style={styles.label}>Garment Type:</Text>
+          <RNPickerSelect
+            style={pickerSelectStyles}
+            onValueChange={(value) => setGarmentType(value)}
+            items={garmentTypes}
+            placeholder={{ label: "Select garment type", value: null }}
+            value={garmentType}
+          />
+        </View>
       </View>
 
-      <View style={styles.inputContainer}>
+      {/* <View style={styles.inputContainer}>
         <Text style={styles.label}>Garment Type:</Text>
         <RNPickerSelect
           style={pickerSelectStyles}
@@ -107,28 +119,29 @@ const OrderScreen = () => {
           placeholder={{ label: "Select garment type", value: null }}
           value={garmentType}
         />
-      </View>
+      </View> */}
 
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>Color:</Text>
-        <RNPickerSelect
-          style={pickerSelectStyles}
-          onValueChange={(value) => setColor(value)}
-          items={colors}
-          placeholder={{ label: "Select color", value: null }}
-          value={color}
-        />
-      </View>
-
-      <View style={styles.inputContainer}>
-        <Text style={styles.label}>Size:</Text>
-        <RNPickerSelect
-          style={pickerSelectStyles}
-          onValueChange={(value) => setSize(value)}
-          items={sizes}
-          placeholder={{ label: "Select size", value: null }}
-          value={size}
-        />
+        <View style={{ width: "50%", paddingHorizontal: 10 }}>
+          <Text style={styles.label}>Color:</Text>
+          <RNPickerSelect
+            style={pickerSelectStyles}
+            onValueChange={(value) => setColor(value)}
+            items={colors}
+            placeholder={{ label: "Select color", value: null }}
+            value={color}
+          />
+        </View>
+        <View style={{ width: "50%", paddingHorizontal: 10 }}>
+          <Text style={styles.label}>Size:</Text>
+          <RNPickerSelect
+            style={pickerSelectStyles}
+            onValueChange={(value) => setSize(value)}
+            items={sizes}
+            placeholder={{ label: "Select size", value: null }}
+            value={size}
+          />
+        </View>
       </View>
 
       <View style={styles.inputContainer}>
@@ -246,9 +259,15 @@ const styles = StyleSheet.create({
     backgroundColor: "#EBEBEB",
     marginTop: 35,
     paddingBottom: 50,
+    borderWidth: 1,
   },
   inputContainer: {
     marginBottom: 20,
+    // borderWidth: 1,
+    width: "100%",
+    flexDirection: "row",
+    paddingVertical: 10,
+    // justifyContent:"space-evenly"
   },
   label: {
     fontWeight: "bold",
@@ -321,6 +340,7 @@ const pickerSelectStyles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     marginBottom: 10,
+    width: "100%",
   },
   inputAndroid: {
     borderWidth: 1,
